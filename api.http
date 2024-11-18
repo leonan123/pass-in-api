@@ -1,0 +1,32 @@
+# @name create-event
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+  "title": "Teste Maximum Attendees 2",
+  "details": null,
+  "maximumAttendees": 1
+}
+
+### @name register-for-event
+
+POST http://localhost:3000/events/c3325f73-a4ad-4aa9-af80-5a157df8daff/attendees
+Content-Type: application/json
+
+{
+  "name": "Leonan Orth",
+  "email": "leonanorth3asza@gmail.com"
+}
+
+### @name get-event
+
+GET http://localhost:3000/events/c3325f73-a4ad-4aa9-af80-5a157df8daff
+
+
+### @name check-in
+
+GET http://localhost:3000/attendees/2/check-in
+
+### @name get-event-attendees
+
+GET http://localhost:3000/events/c3325f73-a4ad-4aa9-af80-5a157df8daff/attendees
